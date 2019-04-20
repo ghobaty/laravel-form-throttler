@@ -1,0 +1,53 @@
+{
+  "name": "ghobaty/laravel-form-throttler",
+  "description": "Throttle failed form submissions for your Laravel app",
+  "keywords": [
+    "laravel",
+    "rate limit",
+    "form throttle",
+    "ghobaty"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohamed Elghobaty",
+      "email": "hello@ghobaty.com",
+      "homepage": "https://ghobaty.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "larapack/dd": "^1.0",
+    "orchestra/testbench": "^3.8",
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ghobaty\\FormThrottler\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ghobaty\\FormThrottler\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Ghobaty\\FormThrottler\\FormThrottlerServiceProvider"
+      ],
+      "aliases": {
+        "FormThrottler": "Ghobaty\\FormThrottler\\FormThrottlerFacade"
+      }
+    }
+  }
+}
